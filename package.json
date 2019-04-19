@@ -1,11 +1,11 @@
 {
   "name": "vue-calendar",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "wu7 <wu7czz@gmail.com>",
   "originalAuthor": "ZEE.KIM <129@.net>",
   "private": false,
-  "main": "dist/calendar.js",
+  "main": "dist/vue-calendar-wu7.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
