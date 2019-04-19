@@ -21,8 +21,9 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    filename: 'vue-calendar-wu7.min.js',
+    library: 'vue-calendar-wu7.js',
+    libraryTarget: 'umd'
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
