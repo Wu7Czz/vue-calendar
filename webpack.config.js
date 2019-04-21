@@ -6,6 +6,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
     filename: 'vue-calendar-wu7.js'
   },
   module: {

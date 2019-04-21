@@ -5,7 +5,7 @@
   "author": "wu7 <wu7czz@gmail.com>",
   "originalAuthor": "ZEE.KIM <129@.net>",
   "private": false,
-  "main": "vue-calendar-wu7.js",
+  "main": "dist/vue-calendar-wu7.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
