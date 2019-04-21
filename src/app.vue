@@ -1,31 +1,49 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+      <calendar
+    ref="calendar1"
+    :events="calendar1.events" 
+    :value="calendar1.value" 
+    :begin="calendar1.begin" 
+    :end="calendar1.end" 
+    :disabled="calendar1.disabled"
+    @select="calendar1.select"
+    @selectMonth="calendar1.selectMonth"
+    @selectYear="calendar1.selectYear"></calendar>
   </div>
 </template>
 
 <script>
+import calendar from './calendar.vue'
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      calendar1:{
+          disabled: [[2017,7,12],[2017,7,16]],
+          value:[2017,7,20], //默认日期
+          events:{
+              '2017-7-9': "<b style='color:red'>v-html</b>",
+              '2017-7-20':'$408',
+              '2017-7-21':'$460',
+              '2017-7-22':'$500',
+          },
+          begin:[2017,7,16],
+          select(value){
+              console.log(value.toString());
+          },
+          selectMonth(month,year){
+              console.log(year,month)
+          },
+          selectYear(year){
+              console.log(year)
+          },
+          timestamp:Date.now()
+      }
     }
+  },
+  components: {
+    calendar
   }
 }
 </script>
