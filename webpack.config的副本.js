@@ -1,12 +1,12 @@
 var path = require('path')
 var webpack = require('webpack')
-var NODE_ENV = process.env.NODE_ENV
+
 module.exports = {
-  entry: NODE_ENV == 'development' ? './src/main.js' : './src/index.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-calendar-wu7.js'
+    filename: 'build.js'
   },
   module: {
     rules: [
