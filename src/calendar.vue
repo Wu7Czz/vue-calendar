@@ -262,8 +262,8 @@
 </template>
 
 <script>
-import calendar from './calendar.js'
 export default {
+    name: 'Vcalendar',
     props: {
         // 只读模式
         readOnly: {
