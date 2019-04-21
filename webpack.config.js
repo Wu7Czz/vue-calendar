@@ -4,8 +4,8 @@ var NODE_ENV = process.env.NODE_ENV
 module.exports = {
   entry: NODE_ENV == 'development' ? './src/main.js' : './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, './lib'),
+    publicPath: '/lib/',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     filename: 'vue-calendar-wu7.js'
